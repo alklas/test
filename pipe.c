@@ -46,7 +46,9 @@ int main() {
 			printf("Не получилось прочитать строку\n");
 			exit(-1);
 		}
-		printf("Информация от дочернего процесса: %s\n", resstring2);
+		printf("Информация от дочернего процесса:");
+		for (int i=0; i<14; i++) printf("%c", resstring2[i]);
+		printf("\n");
 		if(close(fd1[1]) < 0) {
 			printf("Не получилось закрыть исходящий поток\n");
 			exit(-1);
@@ -72,7 +74,9 @@ int main() {
 			printf("Не получилось прочитать строку\n");
 			exit(-1);
 		}
-		printf("%s\n", resstring1);
+		printf("Информация от родителя:");
+		for (int i=0; i<13; i++) printf("%c", resstring1[i]);
+		printf("\n");
 		size = write(fd2[1], string2, 14);
 		//Проверка количества байт, записанных в строку с помощью write()
 		if(size != 14) {
