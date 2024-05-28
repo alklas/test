@@ -1,5 +1,5 @@
 //Вариант, симулирующий выполнение домашнего задания 28.05.2024
-class Help {
+class Help3 {
 	public static void main(String args[]) 
 		throws java.io.IOException {
 		
